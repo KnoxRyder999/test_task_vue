@@ -1,0 +1,24 @@
+{
+  "name": "vue3-firebase-mini-spa",
+  "version": "1.0.0",
+  "description": "Vue 3 + TypeScript + Firebase Functions mini-SPA",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "serve": "firebase emulators:start --only functions",
+    "deploy": "firebase deploy --only functions"
+  },
+  "dependencies": {
+    "vue": "^3.3.4",
+    "firebase": "^10.4.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "typescript": "^5.0.2",
+    "vue-tsc": "^1.4.2",
+    "vite": "^4.4.5",
+    "firebase-tools": "^12.4.0"
+  }
+} 

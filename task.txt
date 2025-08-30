@@ -1,0 +1,35 @@
+As a freelancer, I am going to apply a job.
+Following is the test task for the job.
+
+Test task
+
+You are going through the testing stage for the project of our product fintech team. We have several directions, we work only with professionals. How you complete this task - such a result you show, such a result we will expect from you on real tasks.
+
+Recommendation: do everything clearly, do not ignore details. Any deviation from the requirements is an automatic refusal.
+
+Part 1. Mini-SPA
+
+Single-page application on Vue 3 + TypeScript + Firebase Functions
+Email field
+“Remember my email” button
+Email is saved in Firestore via Cloud Function (function name — the name of your favorite dish; explain the choice of collection in one sentence in the code)
+Email is displayed on the page
+On reboot — email is loaded from Firestore
+Implement one function only via Promise then/catch (without async/await)
+Put all interface texts in a separate file (for example, messages.ts)
+In the code — a one-line comment with an interesting fact about yourself or your favorite city
+README: explanation of the collection name + instructions for launching
+
+Violation of even one point leads to failure of the entire test task
+
+Part 2. Using AI
+Suggest one feature for the application that can be implemented using AI (for example: smart email validation, auto-generation of translations, hints, etc.) etc.)
+Use any AI tool (ChatGPT, Copilot, Perplexity, Claude, etc.) — describe the result or paste the generated code/dialogue into README.
+Briefly describe how you integrated or would integrate it.
+
+Submission format:
+GitHub repository or archive
+README with instructions
+Record the entire screen with sound — your voice comments while completing this test task
+
+Only those who can do exactly what is written and do it quickly will go further.
