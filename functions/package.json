@@ -19,7 +19,8 @@
   },
   "devDependencies": {
     "typescript": "^4.9.0",
-    "firebase-functions-test": "^3.1.0"
+    "firebase-functions-test": "^3.1.0",
+    "@types/node": "^18.0.0"
   },
   "private": true
 } 
