@@ -1,25 +1,60 @@
 @echo off
-echo Setting up Vue 3 + Firebase Mini-SPA...
+echo ========================================
+echo Vue 3 + Firebase Mini-SPA Setup
+echo ========================================
+echo.
 
-REM Install main project dependencies
+echo Checking prerequisites...
+node --version >nul 2>&1
+if %errorlevel% neq 0 (
+    echo ERROR: Node.js is not installed. Please install Node.js 18+ first.
+    pause
+    exit /b 1
+)
+
+npm --version >nul 2>&1
+if %errorlevel% neq 0 (
+    echo ERROR: npm is not installed. Please install Node.js first.
+    pause
+    exit /b 1
+)
+
+echo ✓ Node.js and npm are installed
+echo.
+
 echo Installing main project dependencies...
-npm install
+call npm install
+if %errorlevel% neq 0 (
+    echo ERROR: Failed to install main dependencies
+    pause
+    exit /b 1
+)
+echo ✓ Main dependencies installed
+echo.
 
-REM Install Firebase Functions dependencies
 echo Installing Firebase Functions dependencies...
 cd functions
-npm install
+call npm install
+if %errorlevel% neq 0 (
+    echo ERROR: Failed to install Firebase Functions dependencies
+    pause
+    exit /b 1
+)
 cd ..
+echo ✓ Firebase Functions dependencies installed
+echo.
 
+echo ========================================
+echo Setup completed successfully!
+echo ========================================
 echo.
-echo Setup complete! Next steps:
-echo 1. Update src/config.ts with your Firebase project configuration
-echo 2. Run 'npm run serve' to start Firebase emulator
-echo 3. Run 'npm run dev' in another terminal to start Vue dev server
-echo 4. Open http://localhost:3000 in your browser
+echo Next steps:
+echo 1. Update src/config.ts with your Firebase project details
+echo 2. Update src/emailService.ts with your project ID
+echo 3. Run 'firebase login' to authenticate
+echo 4. Run 'firebase use your-project-id' to set your project
+echo 5. Start development: 'npm run serve' (Terminal 1) and 'npm run dev' (Terminal 2)
 echo.
-echo For production deployment:
-echo 1. Run 'npm run build'
-echo 2. Run 'npm run deploy' to deploy Firebase Functions
-echo 3. Run 'npm run preview' to preview the built app
+echo See setup.md for detailed instructions.
+echo.
 pause 

@@ -1,6 +1,25 @@
 # Vue 3 + TypeScript + Firebase Functions Mini-SPA
 
-A single-page application that allows users to save and remember their email address using Firebase Firestore and Cloud Functions.
+A single-page application that allows users to save and remember their email address using Firebase Firestore and Cloud Functions. This project was created as a test task for a fintech team position.
+
+## Test Task Requirements Compliance
+
+✅ **Part 1: Mini-SPA Requirements**
+- ✅ Single-page application on Vue 3 + TypeScript + Firebase Functions
+- ✅ Email field
+- ✅ "Remember my email" button  
+- ✅ Email saved in Firestore via Cloud Function (function name: `saveRamenPreference`)
+- ✅ Email displayed on the page
+- ✅ On reboot — email loaded from Firestore
+- ✅ Implement one function only via Promise then/catch (without async/await)
+- ✅ Put all interface texts in separate file (messages.ts)
+- ✅ One-line comment with interesting fact about favorite city (Tokyo cafes)
+- ✅ README with collection name explanation + launch instructions
+
+✅ **Part 2: AI Integration**
+- ✅ Smart email validation with intelligent suggestions
+- ✅ AI tool used: ChatGPT for validation logic generation
+- ✅ Feature description and integration approach documented
 
 ## Collection Name Explanation
 
@@ -99,7 +118,7 @@ cd ..
    npm run dev
    ```
 
-3. Open your browser to `http://localhost:3000`
+3. Open your browser to `http://localhost:5173` (Vite default port)
 
 #### Option B: Production Mode
 
@@ -120,12 +139,14 @@ cd ..
 
 ## Firebase Functions
 
-The application uses two Cloud Functions:
+The application uses four Cloud Functions:
 
 - **`saveRamenPreference`**: Saves the user's email to Firestore
-- **`loadRamenPreference`**: Loads the user's saved email from Firestore
+- **`loadRamenPreference`**: Loads the user's saved email from Firestore  
+- **`deleteRamenPreference`**: Deletes the user's email from Firestore
+- **`getEmailStats`**: Retrieves email statistics and domain analysis
 
-Both functions use Promise-based implementation with `.then()` and `.catch()` as required.
+All functions use Promise-based implementation with `.then()` and `.catch()` as required (no async/await).
 
 ## Technical Details
 
